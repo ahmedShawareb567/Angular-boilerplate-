@@ -1,0 +1,127 @@
+// $enable-shadows: true;
+$is-rtl: false;
+$rfs-breakpoint: 1300px;
+$rfs-base-value: 30px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+$theme-colors: (
+  "primary": #00652e,
+  "secondary": #0f0f0f,
+  "danger": #ff4514,
+  "warning": #ff9e18,
+  "success": #00cc47,
+  "info": #cab27e,
+  "dark": #231f20,
+);
+
+$purple: #00652e;
+$primary: #00652e;
+$secondary: #e74b00;
+$danger: #ff4514;
+$warning: #ff9e18;
+$success: #00cc47;
+$info: #cab27e;
+$dark: #231f20;
+$body-bg: #fff;
+$body-color: #231f20;
+$gray-400: #eeeeee;
+$gray-500: #5b6670;
+$gray-600: #5a5a5a;
+$border-radius: 3rem;
+$gray-300: #fcfafa;
+$input-border-color: transparent;
+$input-bg: #fff;
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: $primary;
+$headings-font-weight: 700;
+$btn-font-weight: 700;
+$font-weight-bolder: 700;
+$font-family-base: "CenturyGothic", sans-serif;
+
+$grid-gutter-width: 1.875rem;
+$box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.06);
+$table-radius: 0.3rem;
+$input-padding-y: 0.6rem;
+
+/*!
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/transitions";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// Custom varbiables
+$border-radius-xl: 4px;
+$box-shadow-lg: 0px 0px 15px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-xl: 0px 22px 33px rgba(0, 0, 0, 0.04);
+$font-weight-medium: 500;
+$font-weight-semi: 600;
+$font-family-heading: "CenturyGothic", sans-serif;
+@function aspectRatio($width, $height) {
+  @return ($height / $width) * 100%;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($primary, 10%);
+    outline: 0 solid $gray-400;
+    border-radius: 20em;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
